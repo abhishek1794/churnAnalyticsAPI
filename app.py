@@ -20,6 +20,9 @@ def telecomChurn(body):
     'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 
     'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod', 
     'MonthlyCharges', 'TotalCharges']
+    
+    body = body.split(",")
+    body = [float(i) for i in body]
 
     df = pd.DataFrame([body],columns= cols)
 
